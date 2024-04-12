@@ -1,0 +1,30 @@
+#grid-container {
+  margin: 0 auto; /* Center the grid horizontally */
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(80px, 1fr)
+  ); /* Adjust the size of each square */
+  gap: 0px; /* Adjust the gap between squares */
+  border: 1px solid black;
+  grid-column-gap: 5px; /* Set the gap between columns */
+  grid-row-gap: 5px; /* Set the gap between rows */
+  padding: 5px;
+}
+
+.square {
+  position: relative;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Maintain aspect ratio (square shape) */
+}
+
+
+/*# sourceMappingURL=/src.9ad09f98.css.map */
